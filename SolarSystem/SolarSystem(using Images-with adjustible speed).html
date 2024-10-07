@@ -1,0 +1,246 @@
+<html>
+<body>
+<table align="right">
+<tr><th>
+<table border="1" align="right" height="50" width="245">
+<tr><th>Speed</th></tr>
+</table>
+</th></tr>
+<tr><th>
+<table border="1" align="right" height="490" width="245">
+<tr><th>Mercury:<input type="number" id="no1" value="24" min="1"></th></tr>
+<tr><th>Venus:<input type="number" id="no2" value="17" min="1"></th></tr>
+<tr><th>Earth:<input type="number" id="no3" value="15" min="1"></th></tr>
+<tr><th>Mars:<input type="number" id="no4" value="12" min="1"></th></tr>
+<tr><th>Jupiter:<input type="number" id="no5" value="6" min="1"></th></tr>
+<tr><th>Saturn:<input type="number" id="no6" value="5" min="1"></th></tr>
+<tr><th>Uranus:<input type="number" id="no7" value="3" min="1"></th></tr>
+<tr><th>Neptune:<input type="number" id="no8" value="2" min="1"></th></tr>
+</table>
+</th></tr>
+<canvas height="900" width="1000" id="canvas" style="border:1px solid black;position:absolute;top:0%;left:0%;background-color:black;"></canvas>
+<canvas height="900" width="1000" id="canvas2" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas3" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas4" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas5" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas6" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas7" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas8" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<canvas height="900" width="1000" id="canvas9" style="border:1px solid black;position:absolute;top:0%;left:0%;"></canvas>
+<script type="text/javascript">
+canvas=document.getElementById("canvas");
+ctx=canvas.getContext("2d");
+
+no1=document.getElementById("no1").value;
+no2=document.getElementById("no2").value;
+no3=document.getElementById("no3").value;
+no4=document.getElementById("no4").value;
+no5=document.getElementById("no5").value;
+no6=document.getElementById("no6").value;
+no7=document.getElementById("no7").value;
+no8=document.getElementById("no8").value;
+
+
+setInterval(function()
+{
+no1=document.getElementById("no1").value;
+no2=document.getElementById("no2").value;
+no3=document.getElementById("no3").value;
+no4=document.getElementById("no4").value;
+no5=document.getElementById("no5").value;
+no6=document.getElementById("no6").value;
+no7=document.getElementById("no7").value;
+no8=document.getElementById("no8").value;
+},100);
+
+
+
+val1=10000/no1
+
+ctx.beginPath();
+ctx.arc(500,450,20,0,2*Math.PI);
+ctx.fillStyle="yellow";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(500,450,80,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,120,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+	
+ctx.beginPath();
+ctx.arc(500,450,160,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,200,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,250,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,310,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,370,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500,450,410,0,2*Math.PI);
+ctx.strokeStyle="blue";
+ctx.stroke();
+
+/*ctx.beginPath();
+ctx.moveTo(460,450);
+ctx.bezierCurveTo(460,550,950,550,950,450);
+ctx.moveTo(460,450);
+ctx.bezierCurveTo(460,350,950,350,950,450);
+ctx.strokeStyle="blue";
+ctx.stroke();*/
+a=1;
+b=1;
+c2=document.getElementById("canvas2");
+ca=c2.getContext("2d");
+img=new Image();
+img.src="mercury.jpg"
+a2=1;
+b2=1;
+img2=new Image();
+img2.src="venus.jpg"
+c3=document.getElementById("canvas3");
+cb=c3.getContext("2d");
+a3=1;
+b3=1;
+img3=new Image();
+img3.src="earth.jpg";
+c4=document.getElementById("canvas4");
+cc=c4.getContext("2d");
+a4=1;
+b4=1;
+img4=new Image();
+img4.src="mars.jpg";
+c5=document.getElementById("canvas5");
+cd=c5.getContext("2d");
+a5=1;
+b5=1;
+img5=new Image();
+img5.src="jupiter.jpg";
+c6=document.getElementById("canvas6");
+ce=c6.getContext("2d");
+a6=1;
+b6=1;
+img6=new Image();
+img6.src="saturn.jpg";
+c7=document.getElementById("canvas7");
+cf=c7.getContext("2d");
+a7=1;
+b7=1;
+img7=new Image();
+img7.src="uranus.jpg";
+c8=document.getElementById("canvas8");
+cg=c8.getContext("2d");
+a8=1;
+b8=1;
+img8=new Image();
+img8.src="neptune.jpg";
+c9=document.getElementById("canvas9");
+ch=c9.getContext("2d");
+
+
+setInterval(function(){
+a+=0.001*no1;
+b+=0.001*no1;
+x=80*Math.cos(a);
+y=80*Math.sin(b);
+ca.beginPath();
+ca.clearRect(0,0,2000,2000);
+//ca.translate(500+x,450+y);
+//ca.rotate(0.007);
+ca.drawImage(img,500-7.5+x,450-7.5+y,15,15);
+//ca.translate(-500-x,-450-y);
+},10);
+
+//Movement for venus
+setInterval(function(){
+a2+=0.001*no2;  //xdegree
+b2+=0.001*no2;   //ydegree
+x=120*Math.cos(a2);
+y=120*Math.sin(b2);
+cb.beginPath();
+cb.clearRect(0,0,2000,2000);
+cb.drawImage(img2,492+x,442+y,18,18);
+},10);
+//end of Movement for venus
+
+
+setInterval(function(){
+a3+=/*0.00*/0.001*no3;
+b3+=/*0.00*/0.001*no3;
+x=160*Math.cos(a3);
+y=160*Math.sin(b3);
+cc.beginPath();
+cc.clearRect(0,0,2000,2000);
+cc.drawImage(img3,492+x,440+y,22,22);
+},10);
+
+
+setInterval(function(){
+a4+=0.001*no4;
+b4+=0.001*no4;
+x=200*Math.cos(a4);
+y=200*Math.sin(b4);
+cd.beginPath();
+cd.clearRect(0,0,2000,2000);
+cd.drawImage(img4,492+x,440+y,25,25);
+},10);
+setInterval(function(){
+a5+=0.001*no5;
+b5+=0.001*no5;
+x=250*Math.cos(a5);
+y=250*Math.sin(b5);
+ce.beginPath();
+ce.clearRect(0,0,2000,2000);
+ce.drawImage(img5,480+x,430+y,40,40);
+},10);
+setInterval(function(){
+a6+=0.001*no6;
+b6+=0.001*no6;
+x=310*Math.cos(a6);
+y=310*Math.sin(b6);
+cf.beginPath();
+cf.clearRect(0,0,2000,2000);
+cf.drawImage(img6,482+x,432+y,40,35);
+},10);
+setInterval(function(){
+a7+=0.001*no7;
+b7+=0.001*no7;
+x=370*Math.cos(a7);
+y=370*Math.sin(b7);
+cg.beginPath();
+cg.clearRect(0,0,2000,2000);
+cg.drawImage(img7,488+x,438+y,30,30);
+},10);
+setInterval(function(){
+a8+=0.001*no8;
+b8+=0.001*no8;
+x=410*Math.cos(a8);
+y=410*Math.sin(b8);
+ch.beginPath();
+ch.clearRect(0,0,2000,2000);
+ch.drawImage(img8,488+x,438+y,30,30);
+},10);
+</script>
+</body>
+</html>
